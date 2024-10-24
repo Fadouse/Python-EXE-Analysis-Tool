@@ -29,28 +29,36 @@ You can install the required libraries via pip:
 pip install pefile requests capstone
 ```
 
-Usage
+## Usage
+
 To analyze one or more EXE files, run the following command:
 
-bash
-Copy code
+```bash
 python analyze_exe.py <path_to_exe_file1> <path_to_exe_file2> ...
+```
+
 If no files are provided, the program will prompt you to enter or drag and drop a file path.
 
-Example
-bash
-Copy code
+### Example
+
+```bash
 python analyze_exe.py C:\path\to\file.exe
-Custom Prompts
+```
+
+## Custom Prompts
+
 During the analysis, the AI might request additional assembly disassembly. The tool will allow you to review the analysis and decide whether to proceed. If you choose to continue, you can provide custom prompts for further analysis.
 
-Ollama API
-The tool uses the Ollama API for generating analysis. Make sure you have Ollama running locally at http://localhost:11434.
+## Ollama API
+
+The tool uses the Ollama API for generating analysis. Make sure you have Ollama running locally at `http://localhost:11434`.
 
 If the tool cannot connect or encounters errors with the API, it will retry up to three times with a delay of 5 seconds between attempts.
 
-Logging
+## Logging
+
 All major events, including errors and retries, are logged. You can view the log messages to troubleshoot or follow the analysis process.
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
